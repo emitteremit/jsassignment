@@ -25,6 +25,8 @@ body {
   width: 100%;
   height: auto;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 4px 8px white;
+}
+.history{
+  font-size: large;
+  border-radius: 5px !important;
 }
