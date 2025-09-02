@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-dark">
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
+                Javascript assignment
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Links -->
+            <div class="d-none d-lg-flex ms-auto align-items-center">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Day 2</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Day 2</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mt-5 pt-5">
+        <h1 class="text-light text-center">Differences between VAR LET and CONST</h1>
+        <div class=" bg-white varlet rounded p-5">
+            <p>1. <strong>Scope </strong>- *var*: Function-scoped.
+                Declared variables are accessible within the function where they are defined.
+
+                - *let & const*: Block-scoped.
+                Only accessible within the {} block where they are defined.</p>
+
+            <p> 2. <strong>Hoisting</strong>
+
+                - *var*: Hoisted to the top of its scope and initialized with undefined.
+                - *let & const*: Hoisted but not initialized (in temporal dead zone until declared).</p>
+
+            <p>3. <strong>Re-declaration </strong>
+
+                - *var*: Can be re-declared within the same scope.
+                - *let & const*: Cannot be re-declared in the same scope.</p>
+            <p> 4. <strong>Reassignment</strong>
+
+                - *var & let*: Can be reassigned.
+                - *const*: Cannot be reassigned after initial assignment.</p>
+
+            <p> 5. <strong>Global Object Property</strong>
+
+                - *var* (in global scope): Becomes a property of the global object (window.varName).
+                - *let & const*: Do not become global object properties.</p>
+
+            <p>6. <strong>Use in Loops</strong>
+
+                - *var*: Does not create new scope per iteration.
+                - *let*: Creates a new block scope for each iteration (e.g. in for loops).</p>
+
+            <p> 7. <strong>Declaration Requirement</strong>
+
+                - *var*: Can be declared without initialization.
+                - *let*: Can be declared without initialization.
+                - *const*: Must be initialized at declaration.</p>
+
+            <p> 8. <strong>Mutability</strong>
+
+                - All allow changing contents of objects/arrays (e.g. const obj = {}; obj.name = 'A' works).
+                - *Only const* prohibits reassignment of the whole variable.</p>
+
+            <p> 9. <strong>Practice</p></strong>
+
+                - *Avoid var* in modern JavaScript.
+                - Use *let* for values that change.
+                - Use *const* by default unless you need reassignment.</p>
+
+            <p> 10. <strong> Temporal Dead Zone (TDZ)</strong>
+
+                - *var*: No TDZ, you get undefined if accessed before declaration.
+                - *let & const*: TDZ exists — accessing before declaration throws ReferenceError. </p>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+</html>
