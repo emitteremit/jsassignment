@@ -34,3 +34,6 @@ body {
   font-size: large;
   
 }
+.round{
+  border-radius: 100%;
+}
