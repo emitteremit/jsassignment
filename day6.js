@@ -3,10 +3,7 @@ let hour = currentTime.getHours();
 hour = Number(prompt("what says the time"))
 let userName = "Temitope"
 
-if (hour >= 7 && hour <= 12) {
-    alert(`Good morning ${userName}`);
-}
-else if(hour >= 4 && hour <= 7) {
+if (hour >= 4 && hour <= 12) {
     alert(`Good morning ${userName}`);
 }
 else if(hour >= 1 && hour <= 4) {

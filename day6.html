@@ -68,9 +68,6 @@ let userName = "Temitope"
 if (hour >= 7 && hour <= 12) {
 alert(`Good morning ${userName}`);
 }
-else if(hour >= 4 && hour <= 7) {
-alert(`Good morning ${userName}`);
-}
 else if(hour >= 1 && hour <= 4) {
 alert(`This is mid night go and sleep ${userName}`);
 }
@@ -83,7 +80,14 @@ alert(`Good evening ${userName}`);
 else {
 alert(`This is not a proper time ${userName} 
 input correct time, the time you input is invalid`);
-}        
+}  
+<strong>//ouput</strong>  
+<strong>Note: using 24 hours time not 12 hours time</strong>
+1. From 4am to 12 am it will display good morning 
+2. From 1am to 4am it will display this is 
+midnight go and sleep
+3. From 13pm to 16pm it will display good afternoon
+4. From 17pm to 24pm  it will display good evening
         </code>
     </pre>
     </div>
