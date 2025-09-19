@@ -10,7 +10,7 @@
     <link rel="icon" href="1730746869006.jpg" type="image/jpg">
 </head>
 
-<body class="bg-dark">
+<body class="text-white bg-dark">
     <!-- Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
         <div class="container">
@@ -32,10 +32,17 @@
                     <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#">Day 3</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day5.html">Day 5 </a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day6.html">Day 6 </a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day7.html">Day 7</a></li>
-                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Assignment
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="day5.html">day 5</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                            <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -45,55 +52,99 @@
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Day 3</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day5.html">Day 5</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day6.html">Day 6</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day7.html">Day 7</a></li>
 
+        <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Day 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="day2.html">Day 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Day 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="day4.html">Day 4</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Assignment
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                        <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="container mt-5 pt-5">
-        <h1 class="text-white text-center mb-5">Differences between Numbers and Bigint</h1>
 
-        <div class="row justify-content-around gy-5">
-            <div class="col-lg-5 numbers rounded">
-                <h4 class="text-center"><u>Numbers</u></h4>
-                <p><strong>Size Limit:</strong>Numbers can safely be represent only up to 2 <sup>53</sup> - 1
-                    (Number.MAX_SAFE-SAFER).</p>
-                <p><strong>Syntax:</strong> Numbers can be written as normal numbers -> 123456.</p>
-                <P><strong>Precision:</strong> Numbers may lose precision with very large values.</P>
-                <p><strong>Type:</strong> Numbers typeof 10 returns "number".</p>
-                <p><strong>Decimal:</strong> Numbers supports decimals ->3.</p>
-                <p><strong>Use Case:</strong> Numbers is best for calculations, decimals, and most applications.</p>
-                <p><strong>Memory Usage:</strong> Numbers uses 64-bit floating- point (IEEE754) format; efficent for
-                    general-purpose use.</up>
-            </div>
-            <div class="col-lg-5 bigint rounded">
-                <h4 class="text-center"><u>BigInt</u></h4>
-                <p><strong>Size Limit</strong> BigInt can represent much larger intergers beyond the safe limit.</p>
-                <p><strong>Syntax:</strong> BigInt has to add an *n* at teh end ->123456n.</p>
-                <p><strong>Precision:</strong> BigInt maintain exact with extremely large values.</p>
-                <p><strong>Type:</strong> BigInt typeof 10n returns "bigint".</p>
-                <p><strong>Decimal:</strong> BigInt doesnt support decimals -> 3.14n ->error.</p>
-                <p><strong>Use Case:</strong> BigInt is useful in cryptography, precise large interger math, timestamps.
-                </p>
-                <p><strong>Memory Uasge:</strong> BigInt uses more memory, especially for very large values,since its
-                    optimized for aribaitary-precision intergers.</p>
-            </div>
-        </div>
+    <div style="margin-top: 130px;">
+        <pre class="bg-white text-dark container mt-5 pt-3 rounded">
+        <code>
+<b>//30 DAYS OF JAVASCRIPT </b>
+let challange = "30 days of javascript";
+let challange2 = "Facbook, Google, Microsoft,
+Apple, IBM, Oracle, Amazon ";
+chase = challange.length;
+choose = challange.toUpperCase();
+cook = challange.toLowerCase();
+come = challange.substring(0, 2);
+comb = challange.slice(3, 21);
+collect = challange.includes("script");
+cross = challange.split(" ");
+crop = challange2.split(", ");
+console.log(chase);
+console.log(choose);
+console.log(cook);
+console.log(come);
+console.log(comb);
+console.log(collect)
+console.log(cross)
+console.log(crop) <br><br>
+<b>// output</b>
+1. the length is 21
+2. 30 DAYS OF JAVASCRIPT is the output for 30 days
+of javascript in upper case
+3. 30 days of javascript is the output for 30 days 
+of javascript in lower case
+4. The Substring value of the first word in 30 days 
+of javascript is 3
+5. days of javascript is my output after slicing out  
+days of javascript away from 30 days of javascript
+6. The word script is true in 30 days of javascript 
+7. 
+(4) ['30', 'days', 'of', 'javascript']
+0: "30"
+1: "days"
+2: "of"
+3: "javascript"
+length: 4
+[[prototype]]:Array (0)
+8.(7) ['Facbook', 'Google', 'Microsoft',
+'Apple', 'IBM', 'Oracle', 'Amazon ']
+0: "Facbook"
+1: "Google"
+2: "Microsoft"
+3: "Apple"
+3: "IBM"
+3: "Oracle"
+3: "Amazon "
+length: 7
+[[prototype]]:Array (0)
+        </code>
+    </pre>
     </div>
 </body>
-<script src="index.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+<script src="day3.js"></script>
 
 </html>

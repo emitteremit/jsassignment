@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="icon" href="1730746869006.jpg" type="image/jpg">
 </head>
+
 <body class="bg-dark">
-     <!-- Navbar -->
-     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
-                Javascript Assignment
+                Javascript assignment
             </a>
 
             <!-- Mobile Menu Toggler -->
@@ -30,9 +32,17 @@
                     <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day5.html">Day 5</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day6.html">Day 6</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#">Day 7</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Assignment
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                            <li><a class="dropdown-item" href="#">Day 7</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -50,77 +60,55 @@
                 <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day5.html">Day 5</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day6.html">Day 6</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Day 7</a></li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Assignment
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                        <li><a class="dropdown-item" href="#">Day 7</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
-    <div style="margin-top: 130px;">
-        <h1 class="text-center text-white">CONDITIONAL STATEMENT (IF AND IF ELSE)</h1>
-    <pre class="bg-white text-dark container mt-5 pt-3 rounded">
-        <code >
-let scoreRequest =prompt("You Want To Know 
-Your Grade? InPut your score");
-let scoreRequestConNum = scoreRequest.trim();
-let getUsersGrade = Number(scoreRequestConNum);
-
-if (getUsersGrade >= 80 && getUsersGrade
-<= 100 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (A)")
-}
-else if (getUsersGrade >= 70 && getUsersGrade 
-<= 79 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (B)")
-} 
-else if (getUsersGrade >= 60 && getUsersGrade 
-<= 69 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (C)")
-}
-else if (getUsersGrade >= 50 && getUsersGrade 
-<= 59 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (D)")
-}
-else if (getUsersGrade >= 1 && getUsersGrade 
-<= 49 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (F)")
-}
-else {
-    alert("input score at the range of 0 - 100")
-}
-
-
-let ageRequest = prompt("What Is Your Age ");
-let ageRequestConNum = ageRequest.trim();
-let userAge = Number(ageRequestConNum);
-let underAge = 18 - userAge;
-
-if (userAge === 18 && !isNaN(userAge)) {
-    alert("You Are 18 Years Old And 
-    You Are Old Enough To Drive")
-}
-else if(userAge > 18 && !isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old And 
-    You Are Old Enough To Drive.`)
-}
-
-else if(userAge >= 1 && userAge < 18 && 
-!isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old. 
-    You Have ${underAge} years Left To Drive`)
-}
-else{
-    alert("Your Input Is Invalid Input
-    Right Value Please")
-}
-
-
-        </code>
-    </pre>
+    <div style="margin-top: 100px;" class="bg-white text-dark container rounded">
+        <p id="p1">paragraph 1</p>
+        <p id="p2">paragraph 2</p>
+        <p id="p3">paragraph 3</p>
+        <p id="p4">paragraph 4</p>
+        <pre>
+            <code>
+let getme = document.querySelector("p")
+let getMeId = document.querySelector("#p1")
+let getMeId1 = document.querySelector("#p2")
+let getMeId2 = document.querySelector("#p3")
+let getMeId3= document.querySelector("#p4")
+let getme11 = document.querySelector("#p1")
+getme11.className = "myfirstparagraph";
+let getme12 = document.querySelector("#p2")
+getme12.className = "mysecondparagraph";
+let getme13 = document.querySelector("#p3")
+getme13.className = "mythirdparagraph";
+let getme14 = document.querySelector("#p4")
+getme14.className = "myfourthparagraph";
+let getall = document.querySelectorAll("p")
+console.log(getme)
+console.log(getall)
+console.log(getme11)
+console.log(getMeId)
+console.log(getMeId1)
+console.log(getMeId2)
+console.log(getMeId3)
+            </code>
+        </pre>
+    </div>
 </body>
 <script src="day7.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+
 </html>

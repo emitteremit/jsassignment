@@ -1,43 +1,21 @@
-let scoreRequest =prompt("You Want To Know Your Grade? InPut your score");
-let scoreRequestConNum = scoreRequest.trim();
-let getUsersGrade = Number(scoreRequestConNum);
-
-if (getUsersGrade >= 80 && getUsersGrade <= 100 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (A)")
-}
-else if (getUsersGrade >= 70 && getUsersGrade <= 79 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (B)")
-} 
-else if (getUsersGrade >= 60 && getUsersGrade <= 69 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (C)")
-}
-else if (getUsersGrade >= 50 && getUsersGrade <= 59 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (D)")
-}
-else if (getUsersGrade >= 1 && getUsersGrade <= 49 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (F)")
-}
-else {
-    alert("input score at the range of 0 - 100")
-}
-
-
-let ageRequest = prompt("What Is Your Age ");
-let ageRequestConNum = ageRequest.trim();
-let userAge = Number(ageRequestConNum);
-let underAge = 18 - userAge;
-
-if (userAge === 18 && !isNaN(userAge)) {
-    alert("You Are 18 Years Old And You Are Old Enough To Drive")
-}
-else if(userAge > 18 && !isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old And You Are Old Enough To Drive.`)
-}
-
-else if(userAge >= 1 && userAge < 18 && !isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old. You Have ${underAge} years Left To Drive`)
-}
-else{
-    alert("Your Input Is Invalid Input Right Value Please")
-}
-
+let getme = document.querySelector("p")
+let getMeId = document.querySelector("#p1")
+let getMeId1 = document.querySelector("#p2")
+let getMeId2 = document.querySelector("#p3")
+let getMeId3= document.querySelector("#p4")
+let getme11 = document.querySelector("#p1")
+getme11.className = "myfirstparagraph";
+let getme12 = document.querySelector("#p2")
+getme12.className = "mysecondparagraph";
+let getme13 = document.querySelector("#p3")
+getme13.className = "mythirdparagraph";
+let getme14 = document.querySelector("#p4")
+getme14.className = "myfourthparagraph";
+let getall = document.querySelectorAll("p")
+console.log(getme)
+console.log(getall)
+console.log(getme11)
+console.log(getMeId)
+console.log(getMeId1)
+console.log(getMeId2)
+console.log(getMeId3)
