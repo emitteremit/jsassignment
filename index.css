@@ -26,14 +26,62 @@ body {
   height: auto;
   padding: 20px;
 }
-.history{
+
+.history {
   font-size: large;
   border-radius: 5px !important;
 }
-.varlet{
+
+.varlet {
   font-size: large;
-  
+
 }
-.round{
+
+.round {
   border-radius: 100%;
+}
+
+.simpleCalculator2,
+.retirementCalculator {
+  background-color: black;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  /* optional for spacing inside the boxes */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  /* center the boxes on the screen */
+}
+
+.bodyall {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .bodyall {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+input::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.mycode {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mycode::-webkit-scrollbar {
+  display: none;
+}
+body{
+  overflow-x: hidden ;
 }

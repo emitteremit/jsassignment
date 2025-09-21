@@ -4,13 +4,10 @@ let getMeId1 = document.querySelector("#p2")
 let getMeId2 = document.querySelector("#p3")
 let getMeId3= document.querySelector("#p4")
 let getme11 = document.querySelector("#p1")
-getme11.className = "myfirstparagraph";
-let getme12 = document.querySelector("#p2")
-getme12.className = "mysecondparagraph";
-let getme13 = document.querySelector("#p3")
-getme13.className = "mythirdparagraph";
-let getme14 = document.querySelector("#p4")
-getme14.className = "myfourthparagraph";
+getMeId.className = "myfirstparagraph";
+getMeId1.className = "mysecondparagraph";
+getMeId2.className = "mythirdparagraph";
+getMeId3.className = "myfourthparagraph";
 let getall = document.querySelectorAll("p")
 console.log(getme)
 console.log(getall)

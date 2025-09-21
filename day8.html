@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assignment</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="1730746869006.jpg" type="image/jpg">
+</head>
+
+<body class="bg-dark">
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
+                Javascript assignment
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Links -->
+            <div class="d-none d-lg-flex ms-auto align-items-center">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Assignment
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                            <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
+                            <li><a class="dropdown-item" href="#">Day 8</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Assignment
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
+                        <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
+                        <li><a class="dropdown-item" href="#">Day 8</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container " style="margin-top: 130px; margin-bottom: 20px;">
+        <div class="text-center" style="margin-bottom: 40px;">
+            <h1 class="text-white">RETIREMENT CALCULATOR & SIMPLE CALCULATOR</h1>
+        </div>
+        <div class="row justify-content-center g-4">
+            <!-- Retirement Calculator -->
+            <div class="col-12 col-md-5 retirementCalculator">
+                <div class="p-4  rounded shadow-sm">
+                    <input type="text" id="inputForRetirementage" placeholder="Enter your year of birth" class="form-control mb-3">
+                    <button onclick="Calculate()" class="btn btn-primary w-100 mb-3">Calculate Retirement Age</button>
+                    <span class="answer text-success fw-bold"></span>
+                </div>
+            </div>
+
+            <!-- Simple Calculator -->
+            <div class="col-12 col-md-6 simpleCalculator2">
+                <div class="p-4  rounded shadow-sm">
+                    <div class="mb-3 d-flex gap-3 flex-wrap">
+                        <input type="text" id="firstNumber" placeholder="First Number" class="form-control"
+                            style="max-width: 200px;">
+                        <span class="operator align-self-center text-white"></span>
+                        <input type="text" id="secondNumber" placeholder="Second Number" class="form-control"
+                            style="max-width: 200px;">
+                    </div>
+                    <span class="answer2 text-success fw-bold d-block mb-3"></span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button onclick="multiplication()" class="btn btn-secondary">*</button>
+                        <button onclick="addition()" class="btn btn-secondary">+</button>
+                        <button onclick="substraction()" class="btn btn-secondary">-</button>
+                        <button onclick="division()" class="btn btn-secondary">/</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white text-dark container rounded ">
+        <pre class="mycode">
+            <code>
+                // retirementcalculator
+const Calculate = () => {
+let getYearOfBirth = document.getElementById("inputForRetirementage").value.trim();
+if (getYearOfBirth === "") {
+    document.querySelector(".answer").textContent = "Please 
+    input a valid year of birth your input are invalid.";
+    return;
+}
+if (isNaN(getYearOfBirth)) {
+    document.querySelector(".answer").textContent = "Your 
+    input isn't number, input Numbers as your input";
+    return;
+}
+let birthYear = Number(getYearOfBirth);
+let getCurrentYear = new Date().getFullYear();
+let age = getCurrentYear - birthYear;
+let retirementAge = 60;
+let remainingYears = retirementAge - age;
+let result = '';
+if (age < 60 && age >= 1) {
+    result = `You are ${age} years old. You have ${remainingYears} 
+    years until retirement.`;
+}
+else if (age === 60) {
+    result = `You are ${age} years old. You should retire this year.`;
+}
+else if (age > 60) {
+    result = `You are ${age} years old. You should have retired 
+    ${Math.abs(remainingYears)} years ago.`;
+}
+else {
+    result = "your input are invalid input valid input please.";
+}
+document.querySelector(".answer").textContent = result;
+document.getElementById("inputForRetirementage").value = " ";
+}
+// addition
+const addition = () => {
+let getFirstNumber = document.getElementById("firstNumber").value.trim();
+let getSecondNumber = document.getElementById("secondNumber").value.trim();
+
+if (getFirstNumber === "" || getSecondNumber === "") {
+    document.querySelector(".answer2").textContent = "Please input valid numbers.";
+    return;
+}
+else if (isNaN(getFirstNumber) || isNaN(getSecondNumber)) {
+    document.querySelector(".answer2").textContent = "your input 
+    are not numbers, input valid numbers.";
+    return;
+}
+let getFirstNumberToNumber = Number(getFirstNumber);
+let getSecondNumberToNumber = Number(getSecondNumber);
+let sum = getFirstNumberToNumber + getSecondNumberToNumber;
+
+document.querySelector(".answer2").textContent = `The Addition 
+of ${getFirstNumberToNumber} and ${getSecondNumberToNumber} is ${sum}`;
+document.querySelector(".operator").textContent = "+"
+
+document.getElementById("firstNumber").value = "";
+document.getElementById("secondNumber").value = "";
+}
+//multiplication
+const multiplication = () => {
+let getFirstNumberInMul = document.getElementById("firstNumber").value.trim();
+let getSecondNumberInmul = document.getElementById("secondNumber").value.trim();
+
+if (getFirstNumberInMul === "" || getSecondNumberInmul === "") {
+    document.querySelector(".answer2").textContent = "Please input valid numbers.";
+    return;
+}
+else if (isNaN(getFirstNumberInMul) || isNaN(getSecondNumberInmul)) {
+    document.querySelector(".answer2").textContent = "your input 
+    are not numbers, input valid numbers.";
+    return;
+}
+let getFirstNumberToNumberInMul = Number(getFirstNumberInMul);
+let getSecondNumberToNumberInMul = Number(getSecondNumberInmul);
+
+let multiply = getFirstNumberToNumberInMul * getSecondNumberToNumberInMul;
+document.querySelector(".answer2").textContent = `The Multiplication 
+of ${getFirstNumberToNumberInMul} and ${getSecondNumberToNumberInMul} is ${multiply}`;
+document.querySelector(".operator").textContent = "*"
+
+document.getElementById("firstNumber").value = "";
+document.getElementById("secondNumber").value = "";
+}
+// substraction
+const substraction = () => {
+let getFirstNumberInSub = document.getElementById("firstNumber").value.trim();
+let getSecondNumberInSub = document.getElementById("secondNumber").value.trim();
+
+if (getFirstNumberInSub === "" || getSecondNumberInSub === "") {
+    document.querySelector(".answer2").textContent = "Please input valid numbers.";
+    return;
+}
+else if (isNaN(getFirstNumberInSub) || isNaN(getSecondNumberInSub)) {
+    document.querySelector(".answer2").textContent = "your input are 
+    not numbers, input valid numbers.";
+    return;
+}
+let getFirstNumberToNumberInSub = Number(getFirstNumberInSub);
+let getSecondNumberToNumberInSub = Number(getSecondNumberInSub);
+
+let substract = getFirstNumberToNumberInSub - getSecondNumberToNumberInSub;
+document.querySelector(".answer2").textContent = `The Substraction of 
+${getFirstNumberToNumberInSub} and ${getSecondNumberToNumberInSub} is ${substract}`;
+document.querySelector(".operator").textContent = "-"
+
+document.getElementById("firstNumber").value = "";
+document.getElementById("secondNumber").value = "";
+}
+// division
+const division = () => {
+let getFirstNumberInDiv = document.getElementById("firstNumber").value.trim();
+let getSecondNumberInDiv = document.getElementById("secondNumber").value.trim();
+
+if (getFirstNumberInDiv === "" || getSecondNumberInDiv === "") {
+    document.querySelector(".answer2").textContent = "Please input valid numbers.";
+    return;
+}
+else if(isNaN(getFirstNumberInDiv) || isNaN(getSecondNumberInDiv)){
+    document.querySelector(".answer2").textContent = "your input are not numbers, 
+    input valid numbers.";
+    return;
+}
+let getFirstNumberToNumberInDiv = Number(getFirstNumberInDiv);
+let getSecondNumberToNumberInDiv = Number(getSecondNumberInDiv);
+
+let divide = getFirstNumberToNumberInDiv / getSecondNumberToNumberInDiv;
+document.querySelector(".answer2").textContent = `The Division of 
+${ getFirstNumberToNumberInDiv } and ${ getSecondNumberToNumberInDiv } is ${ divide } `;
+document.querySelector(".operator").textContent = "/"
+
+document.getElementById("firstNumber").value = "";
+document.getElementById("secondNumber").value = "";
+}
+
+            </code>
+        </pre>
+    </div>
+</body>
+<script src="day8.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+
+</html>
