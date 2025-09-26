@@ -48,10 +48,8 @@ body {
   max-width: 700px;
   border-radius: 20px;
   padding: 20px;
-  /* optional for spacing inside the boxes */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 10px auto;
-  /* center the boxes on the screen */
 }
 
 .bodyall {
@@ -79,9 +77,38 @@ input::placeholder {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .mycode::-webkit-scrollbar {
   display: none;
 }
-body{
-  overflow-x: hidden ;
+
+body {
+  overflow-x: hidden;
+}
+
+.loanCalculator {
+  background-color: black;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  height: auto;
+
+}
+
+#ourInput,
+#monthDuration {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  height: 50px;
+}
+#myBtn{
+  border: none;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
 }

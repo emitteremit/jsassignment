@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="icon" href="1730746869006.jpg" type="image/jpg">
 </head>
+</head>
 
 <body class="bg-dark">
     <!-- Navbar -->
@@ -29,7 +30,7 @@
             <div class="d-none d-lg-flex ms-auto align-items-center">
                 <ul class="navbar-nav flex-row">
                     <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#">Day 2</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
                     <li class="nav-item dropdown">
@@ -42,7 +43,7 @@
                             <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
                             <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
                             <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                            <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
+                            <li><a class="dropdown-item" href="#">Day 9</a></li>
                             <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
                         </ul>
                     </li>
@@ -60,7 +61,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Day 2</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
                 <li class="nav-item dropdown">
@@ -73,71 +74,56 @@
                         <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
                         <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
                         <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                        <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
+                        <li><a class="dropdown-item" href="#">Day 9</a></li>
                         <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="container mt-5 pt-5">
-        <h1 class="text-light text-center">Differences between VAR LET and CONST</h1>
-        <div class=" bg-white varlet rounded p-5">
-            <p>1. <strong>Scope </strong>- *var*: Function-scoped.
-                Declared variables are accessible within the function where they are defined.
-
-                - *let & const*: Block-scoped.
-                Only accessible within the {} block where they are defined.</p>
-
-            <p> 2. <strong>Hoisting</strong>
-
-                - *var*: Hoisted to the top of its scope and initialized with undefined.
-                - *let & const*: Hoisted but not initialized (in temporal dead zone until declared).</p>
-
-            <p>3. <strong>Re-declaration </strong>
-
-                - *var*: Can be re-declared within the same scope.
-                - *let & const*: Cannot be re-declared in the same scope.</p>
-            <p> 4. <strong>Reassignment</strong>
-
-                - *var & let*: Can be reassigned.
-                - *const*: Cannot be reassigned after initial assignment.</p>
-
-            <p> 5. <strong>Global Object Property</strong>
-
-                - *var* (in global scope): Becomes a property of the global object (window.varName).
-                - *let & const*: Do not become global object properties.</p>
-
-            <p>6. <strong>Use in Loops</strong>
-
-                - *var*: Does not create new scope per iteration.
-                - *let*: Creates a new block scope for each iteration (e.g. in for loops).</p>
-
-            <p> 7. <strong>Declaration Requirement</strong>
-
-                - *var*: Can be declared without initialization.
-                - *let*: Can be declared without initialization.
-                - *const*: Must be initialized at declaration.</p>
-
-            <p> 8. <strong>Mutability</strong>
-
-                - All allow changing contents of objects/arrays (e.g. const obj = {}; obj.name = 'A' works).
-                - *Only const* prohibits reassignment of the whole variable.</p>
-
-            <p> 9. <strong>Practice</p></strong>
-
-            - *Avoid var* in modern JavaScript.
-            - Use *let* for values that change.
-            - Use *const* by default unless you need reassignment.</p>
-
-            <p> 10. <strong> Temporal Dead Zone (TDZ)</strong>
-
-                - *var*: No TDZ, you get undefined if accessed before declaration.
-                - *let & const*: TDZ exists — accessing before declaration throws ReferenceError. </p>
-
+    <h1 class="text-center text-white"style="margin-top: 130px;">Loan Calculator</h1>
+    <div class="container loanCalculator   rounded shadow-sm">
+        <div style="padding: 20px;">
+            <input type="text" id="ourInput" placeholder="input your loan amount" style="margin-bottom: 20px;"><br>
+            <input type="text" id="monthDuration" placeholder="numbers of months of repayment"><br>
+            <button id="myBtn" class="mb-2">
+                calculate
+            </button><br>
+            <h4 class="text-white">NOTE: on a ROI of 15% interest</h4><br>
+            <p id="answer" class="text-success fw-bold d-block mb-3"></p><br>
         </div>
     </div>
+    <div class="bg-white text-dark container rounded ">
+        <pre>
+        <code>
+let getbutton = document.getElementById("myBtn")
+let paragraph = document.getElementById("answer")
+getbutton.addEventListener("click", () => {
+let getInput = document.getElementById("ourInput").value.trim();
+let monthduration = document.getElementById("monthDuration").value.trim();
+let getMonthDuration = parseFloat(monthduration);
+let getInputToNumber = parseFloat(getInput);
+let monthlyInterest = (15 / 100) * getInputToNumber;
+let TotalRepayment = (getInputToNumber + monthlyInterest) * getMonthDuration;
+let monthlyRepayment = TotalRepayment / getMonthDuration;
+let monthsToRepay = TotalRepayment / monthlyRepayment;
+if (!isNaN(getInputToNumber) && !isNaN(getMonthDuration) && getInputToNumber !== "" && getMonthDuration !== "") {
+    paragraph.textContent = `you are borrowing ${getInputToNumber} for ${getMonthDuration} months your total repayment is ${TotalRepayment} while your monthly repayment is ${monthlyRepayment} for ${monthsToRepay} months`
+}
+if (getInput === "" || monthduration === "") {
+    paragraph.textContent = "you input can't be empty please input valid input";
+}
+if (isNaN(monthduration) || isNaN(getInput)) {
+    paragraph.textContent = "your input must be a number, please correct it";
+}
+    document.getElementById("ourInput").value = "";
+    document.getElementById("monthDuration").value = "";
+})
+        </code>
+    </pre>
+    </div>
 </body>
+<script src="day9.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>

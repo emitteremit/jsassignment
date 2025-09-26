@@ -33,6 +33,7 @@ const Calculate = () => {
     document.querySelector(".answer").textContent = result;
     document.getElementById("inputForRetirementage").value = " ";
 }
+//simple calculator
 // addition
 const addition = () => {
     let getFirstNumber = document.getElementById("firstNumber").value.trim();
