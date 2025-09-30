@@ -10,9 +10,7 @@ const Calculate = () => {
         return;
     }
 
-    let birthYear = Number(getYearOfBirth);
-    let getCurrentYear = new Date().getFullYear();
-    let age = getCurrentYear - birthYear;
+    let age = Number(getYearOfBirth);
     let retirementAge = 60;
     let remainingYears = retirementAge - age;
 

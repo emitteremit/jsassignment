@@ -1,7 +1,7 @@
 const Calculate = () => {
     let firstNumberToNum = prompt("input your first number").trim();
     let Operator = prompt("input the type of operator you want to make use of")
-    let seNumber = prompt("input your second number").trim()
+    let seNumber = prompt("input your second number").trim();
     if(isNaN(firstNumberToNum) || isNaN(seNumber)){
         alert("one of your value is not a number")
     }
@@ -12,7 +12,7 @@ const Calculate = () => {
         firstNumberToNum = Number(firstNumberToNum);
         seNumber = Number(seNumber);
         let division = firstNumberToNum / seNumber;
-        alert(`the division between ${firstNumberToNum} and ${seNumber} is ${division}`)
+        alert(`the division between ${firstNumberToNum} and ${seNumber} is ${division}`);
     }
     else if(Operator === "+"){
         firstNumberToNum = Number(firstNumberToNum);

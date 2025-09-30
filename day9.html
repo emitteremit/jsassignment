@@ -29,22 +29,23 @@
             <!-- Desktop Links -->
             <div class="d-none d-lg-flex ms-auto align-items-center">
                 <ul class="navbar-nav flex-row">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Assignment
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                            <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                            <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                            <li><a class="dropdown-item" href="#">Day 9</a></li>
-                            <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
+                            <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                        <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                        <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                        <li><a class="dropdown-item" href="#">Loan Calculator</a></li>
+                        <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,22 +61,23 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Greetings</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Assignment
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                        <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                        <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                        <li><a class="dropdown-item" href="#">Day 9</a></li>
-                        <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
+                        <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                        <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                        <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                        <li><a class="dropdown-item" href="#">Loan Calculator</a></li>
+                        <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                     </ul>
                 </li>
             </ul>
@@ -83,7 +85,7 @@
     </div>
     <h1 class="text-center text-white"style="margin-top: 130px;">Loan Calculator</h1>
     <div class="container loanCalculator   rounded shadow-sm">
-        <div style="padding: 20px;">
+        <div style="padding: 20px;" class="text-center">
             <input type="text" id="ourInput" placeholder="input your loan amount" style="margin-bottom: 20px;"><br>
             <input type="text" id="monthDuration" placeholder="numbers of months of repayment"><br>
             <button id="myBtn" class="mb-2">
@@ -96,6 +98,7 @@
     <div class="bg-white text-dark container rounded ">
         <pre>
         <code>
+//loan Calculator
 let getbutton = document.getElementById("myBtn")
 let paragraph = document.getElementById("answer")
 getbutton.addEventListener("click", () => {
@@ -103,21 +106,26 @@ let getInput = document.getElementById("ourInput").value.trim();
 let monthduration = document.getElementById("monthDuration").value.trim();
 let getMonthDuration = parseFloat(monthduration);
 let getInputToNumber = parseFloat(getInput);
-let monthlyInterest = (15 / 100) * getInputToNumber;
-let TotalRepayment = (getInputToNumber + monthlyInterest) * getMonthDuration;
+let Interest = ((15) * getInputToNumber);
+let monthlyInterest = Interest /100;
+let TotalRepayment = (getInputToNumber + monthlyInterest);
 let monthlyRepayment = TotalRepayment / getMonthDuration;
+monthlyRepayment = Math.round(monthlyRepayment)
 let monthsToRepay = TotalRepayment / monthlyRepayment;
+monthsToRepay = Math.round(monthsToRepay)
 if (!isNaN(getInputToNumber) && !isNaN(getMonthDuration) && getInputToNumber !== "" && getMonthDuration !== "") {
-    paragraph.textContent = `you are borrowing ${getInputToNumber} for ${getMonthDuration} months your total repayment is ${TotalRepayment} while your monthly repayment is ${monthlyRepayment} for ${monthsToRepay} months`
+    paragraph.textContent = `you are borrowing $${getInputToNumber} for ${getMonthDuration} months your total repayment is $${TotalRepayment} while your monthly repayment is $${monthlyRepayment} for ${monthsToRepay} months`
 }
 if (getInput === "" || monthduration === "") {
     paragraph.textContent = "you input can't be empty please input valid input";
 }
 if (isNaN(monthduration) || isNaN(getInput)) {
+
     paragraph.textContent = "your input must be a number, please correct it";
 }
-    document.getElementById("ourInput").value = "";
-    document.getElementById("monthDuration").value = "";
+
+document.getElementById("ourInput").value = "";
+document.getElementById("monthDuration").value = "";
 })
         </code>
     </pre>

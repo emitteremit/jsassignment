@@ -1,38 +1,39 @@
-const countries = ['albania', 'bolivia', 'canada', 'denmark', 'ethopia', 'finland', 'germany', 'hungary', 'ireland', 'japan', 'kenya'];
+// first Assignment
+const countries = ['albania', 'bolivia', 'canada', 'denmark','ethopia', 'finland', 'germany', 'hungary', 'ireland', 'japan', 'kenya'];
 if (countries.includes("ethopia")) {
-    const eth = countries.filter(talk => talk === "ethopia")
-    const upperEth = eth.map(max => max.toUpperCase())
-    console.log(upperEth)
+    console.log("ETHOPIA")
 }
 else {
-    countries.push("ethopia")
+    countries.splice(4,0, "ethopia")
     console.log(countries)
 }
 
+// second Assignment
 const webTechs = ['html', 'css', 'javascript', 'react', 'redux', 'node', 'mongoDB']
 
 if (webTechs.includes("sass")) {
-    const filtered = webTechs.filter(tech => tech === "sass")
-    const upperWebTechs = filtered.map(main => main.toUpperCase())
-    console.log(upperWebTechs)
+    console.log("sass is a css processor")
 }
 else {
     webTechs.push("sass")
     console.log(webTechs)
 }
 
+// 3rd Assignment
 const ShoppingCart = ['milk', 'coffee', 'tea', 'honey'];
+
+// to add meat to the front of the array
 ShoppingCart.unshift("meat")
 console.log(ShoppingCart)
+
+//to add sugar to the end of the array
 ShoppingCart.push("sugar")
 console.log(ShoppingCart)
-const hondeyIndex = ShoppingCart.indexOf("honey");
-if (hondeyIndex !== -1) {
-    ShoppingCart.splice(hondeyIndex, 1);
-}
+
+// to remove honey from the array
+ShoppingCart.splice(ShoppingCart.length -2, 1)
 console.log(ShoppingCart)
-const teaIndex = ShoppingCart.indexOf("tea");
-if (teaIndex !== 1) {
-    ShoppingCart[teaIndex] = 'greentea';
-}
-console.log(ShoppingCart);
+
+//to add greeen in front of tea
+const ment = ShoppingCart.splice(3,1, "greentea");
+console.log(ShoppingCart)

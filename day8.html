@@ -28,23 +28,23 @@
             <!-- Desktop Links -->
             <div class="d-none d-lg-flex ms-auto align-items-center">
                 <ul class="navbar-nav flex-row">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Assignment
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                            <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                            <li><a class="dropdown-item" href="#">Day 8</a></li>
-                            <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
-                            <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
-                        </ul>
+                            <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                            <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                            <li><a class="dropdown-item" href="#">Calculator</a></li>
+                            <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                            <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                            <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>                        </ul>
                     </li>
                 </ul>
             </div>
@@ -59,22 +59,23 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Greetings</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Assignment
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                        <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                        <li><a class="dropdown-item" href="#">Day 8</a></li>
-                        <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
-                        <li><a class="dropdown-item" href="day10.html">Day 10</a></li>
+                        <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                        <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                        <li><a class="dropdown-item" href="#">Calculator</a></li>
+                        <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                        <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                     </ul>
                 </li>
             </ul>
@@ -88,7 +89,7 @@
             <!-- Retirement Calculator -->
             <div class="col-12 col-md-5 retirementCalculator">
                 <div class="p-4  rounded shadow-sm">
-                    <input type="text" id="inputForRetirementage" placeholder="Enter your year of birth" class="form-control mb-3">
+                    <input type="text" id="inputForRetirementage" placeholder="Enter your age" class="form-control mb-3">
                     <button onclick="Calculate()" class="btn btn-primary w-100 mb-3">Calculate Retirement Age</button>
                     <span class="answer text-success fw-bold"></span>
                 </div>
@@ -118,42 +119,36 @@
     <div class="bg-white text-dark container rounded ">
         <pre class="mycode">
             <code>
-                // retirementcalculator
+// retirementcalculator
 const Calculate = () => {
 let getYearOfBirth = document.getElementById("inputForRetirementage").value.trim();
 if (getYearOfBirth === "") {
-    document.querySelector(".answer").textContent = "Please 
-    input a valid year of birth your input are invalid.";
+    document.querySelector(".answer").textContent = "Please input a valid year of birth your input are invalid.";
     return;
 }
 if (isNaN(getYearOfBirth)) {
-    document.querySelector(".answer").textContent = "Your 
-    input isn't number, input Numbers as your input";
+    document.querySelector(".answer").textContent = "Your input isn't number, input Numbers as your input";
     return;
 }
-let birthYear = Number(getYearOfBirth);
-let getCurrentYear = new Date().getFullYear();
-let age = getCurrentYear - birthYear;
+let age = Number(getYearOfBirth);
 let retirementAge = 60;
 let remainingYears = retirementAge - age;
 let result = '';
 if (age < 60 && age >= 1) {
-    result = `You are ${age} years old. You have ${remainingYears} 
-    years until retirement.`;
+    result = `You are ${age} years old. You have ${remainingYears} years until retirement.`;
 }
 else if (age === 60) {
     result = `You are ${age} years old. You should retire this year.`;
 }
 else if (age > 60) {
-    result = `You are ${age} years old. You should have retired 
-    ${Math.abs(remainingYears)} years ago.`;
+    result = `You are ${age} years old. You should have retired ${Math.abs(remainingYears)} years ago.`;
 }
 else {
     result = "your input are invalid input valid input please.";
 }
 document.querySelector(".answer").textContent = result;
 document.getElementById("inputForRetirementage").value = " ";
-}
+                }
 // addition
 const addition = () => {
 let getFirstNumber = document.getElementById("firstNumber").value.trim();

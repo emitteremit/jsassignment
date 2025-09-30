@@ -10,7 +10,7 @@
     <link rel="icon" href="1730746869006.jpg" type="image/jpg">
 </head>
 
-<body class="bg-dark">
+<body id="body">
     <!-- Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
         <div class="container">
@@ -29,9 +29,9 @@
             <div class="d-none d-lg-flex ms-auto align-items-center">
                 <ul class="navbar-nav flex-row">
                     <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
+                <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,11 +40,11 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
                             <li><a class="dropdown-item" href="day6.html">Functions</a></li>
-                            <li><a class="dropdown-item" href="#">DOM</a></li>
+                            <li><a class="dropdown-item" href="day7.html">Dom</a></li>
                             <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
                             <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
                             <li><a class="dropdown-item" href="day10.html">Array</a></li>
-                            <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
+                            <li><a class="dropdown-item" href="#">Guess Number Game</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -72,51 +72,142 @@
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
                         <li><a class="dropdown-item" href="day6.html">Functions</a></li>
-                        <li><a class="dropdown-item" href="#">DOM</a></li>
+                        <li><a class="dropdown-item" href="day7.html">Dom</a></li>
                         <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
                         <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
                         <li><a class="dropdown-item" href="day10.html">Array</a></li>
-                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
+                        <li><a class="dropdown-item" href="#">Guess Number Game</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-    <div style="margin-top: 100px;" class="bg-white text-dark container rounded">
-        <p id="p1">paragraph 1</p>
-        <p id="p2">paragraph 2</p>
-        <p id="p3">paragraph 3</p>
-        <p id="p4">paragraph 4</p>
+    <div id="whole" class="container">
+        <div id="whole2">
+            <p class="text-center">This is a guess a number game you are to guess a number within the range of 10 to 25</p><br>
+            <input id="userInput" type="text">
+            <div class="text-center">
+                <button id="myBtn1" onclick="guess()">Guess</button>    
+                <button id="myBtn2" onclick="resetGame()">Reset</button>
+            </div>
+            <p id="answer" class="text-center"></p>
+        </div>
+    </div>
+    <div id="code" class="container">
         <pre>
             <code>
-let getme = document.querySelector("p")
-let getMeId = document.querySelector("#p1")
-let getMeId1 = document.querySelector("#p2")
-let getMeId2 = document.querySelector("#p3")
-let getMeId3= document.querySelector("#p4")
-let getme11 = document.querySelector("#p1")
-getme11.className = "myfirstparagraph";
-let getme12 = document.querySelector("#p2")
-getme12.className = "mysecondparagraph";
-let getme13 = document.querySelector("#p3")
-getme13.className = "mythirdparagraph";
-let getme14 = document.querySelector("#p4")
-getme14.className = "myfourthparagraph";
-let getall = document.querySelectorAll("p")
-console.log(getme)
-console.log(getall)
-console.log(getme11)
-console.log(getMeId)
-console.log(getMeId1)
-console.log(getMeId2)
-console.log(getMeId3)
+const paragraph = document.getElementById("answer");
+const button1 = document.getElementById("myBtn1");
+const button2 = document.getElementById("myBtn2");
+const userInput = document.getElementById("userInput");
+const div = document.getElementById("whole")
+const div2 = document.getElementById("whole2")
+let body = document.getElementById("body")
+
+const minNum = 10;
+const maxNum = 25;
+const maxAttempts = 6;
+
+let machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+let attempts = 0;
+
+console.log(machineGuessNumber);
+
+button2.style.display = "none";
+
+const guess = () => {
+  const getUserInput = userInput.value.trim();
+
+  if (getUserInput === "") {
+    paragraph.textContent = "Your input is not meant to be  empty, Please enter a valid number";
+    return;
+  }
+
+  if (isNaN(getUserInput)) {
+    paragraph.textContent = "Your input should be a number not an Alphabet please";
+    return;
+  }
+
+  const getUserInputToNumber = Number(getUserInput);
+
+  if (getUserInputToNumber > maxNum || getUserInputToNumber < minNum) {
+    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;
+    return;
+  } 
+
+  attempts++;
+
+  if (machineGuessNumber === getUserInputToNumber) {
+    paragraph.textContent = `Congratulations!✅ You guessed it in ${attempts} tries`;
+    button1.style.display = "none";
+    button2.style.display = "inline-block";
+  } else if (attempts >= maxAttempts) {
+    paragraph.textContent = `Game over! The number was ${machineGuessNumber}`;
+    button1.style.display = "none";
+    button2.style.display = "inline-block";
+  } else {
+    paragraph.textContent = `Not correct❌. Attempts left: ${maxAttempts - attempts}`;
+  }
+  userInput.value = "";
+  document.getElementById("userInput").value = ""
+};
+
+const resetGame = () => {
+  machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+  attempts = 0;
+  button1.style.display = "inline-block";
+  button2.style.display = "none";
+  paragraph.textContent = "";
+  userInput.value = "";
+  console.log(machineGuessNumber);
+};
+paragraph.style.color ="green"
+const allabout = {
+    background: "black",
+    color: "white",
+    width: "100%",
+    maxWidth: "500px",
+    height: "auto",
+    borderRadius: "10px",
+    marginTop: '130px' ,
+    boxShadow: "inset  0px 0px 10px white "
+
+}
+const allabout2 = {
+    padding: '80px'
+}
+const input = {
+    borderRadius:"10px",
+    padding:"10px",
+    width:"100%",
+    maxWidth:"400px",
+}
+const aboutbutton = {
+  border: "none",
+  background: "white",
+  borderRadius:"20px",
+  padding:"10px 40px",
+  marginTop:"20px"
+}
+const aboutbutton2 = {
+  border: "none",
+  background: "white",
+  borderRadius:"20px",
+  padding:"10px 40px",
+  marginTop:"20px"
+}
+body.style.background = "black"
+Object.assign(div.style, allabout)
+Object.assign(div2.style,allabout2)
+Object.assign(userInput.style, input)
+Object.assign(button1.style, aboutbutton)
+Object.assign(button2.style,aboutbutton2)
             </code>
         </pre>
     </div>
 </body>
-<script src="day7.js"></script>
+<script src="day11.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
-
 </html>

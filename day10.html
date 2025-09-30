@@ -29,22 +29,23 @@
             <!-- Desktop Links -->
             <div class="d-none d-lg-flex ms-auto align-items-center">
                 <ul class="navbar-nav flex-row">
-                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Day 1</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day2.html">Day 2</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day3.html">Day 3</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="day4.html">Day 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Assignment
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                            <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                            <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                            <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                            <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
-                            <li><a class="dropdown-item" href="#">Day 10</a></li>
+                            <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                            <li><a class="dropdown-item" href="day7.html">Dom</a></li>
+                            <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                            <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                            <li><a class="dropdown-item" href="#">Array</a></li>
+                            <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -60,22 +61,23 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Day 1</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Day 2</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day3.html">Day 3</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Day 4</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Greetings</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Assignment
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="day5.html">Day 5</a></li>
-                        <li><a class="dropdown-item" href="day6.html">Day 6</a></li>
-                        <li><a class="dropdown-item" href="day7.html">Day 7</a></li>
-                        <li><a class="dropdown-item" href="day8.html">Day 8</a></li>
-                        <li><a class="dropdown-item" href="day9.html">Day 9</a></li>
-                        <li><a class="dropdown-item" href="#">Day 10</a></li>
+                        <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                        <li><a class="dropdown-item" href="day7.html">Dom</a></li>
+                        <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                        <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                        <li><a class="dropdown-item" href="#">Array</a></li>
+                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                     </ul>
                 </li>
             </ul>
@@ -85,44 +87,56 @@
 
         <pre class="bg-white text-dark container mt-5 pt-3 rounded">
             <code>
-const countries = ['albania', 'bolivia', 'canada', 'denmark', 'ethopia', 'finland', 'germany', 'hungary', 'ireland', 'japan', 'kenya'];
+// first Assignment
+const countries = ['albania', 'bolivia', 'canada', 'denmark','ethopia', 'finland', 'germany', 'hungary', 'ireland', 'japan', 'kenya'];
 if (countries.includes("ethopia")) {
-const eth = countries.filter(talk => talk === "ethopia")
-const upperEth = eth.map(max => max.toUpperCase())
-console.log(upperEth)
+    console.log("ETHOPIA")
 }
 else {
-    countries.push("ethopia")
+    countries.splice(4,0, "ethopia")
     console.log(countries)
 }
 
+// second Assignment
 const webTechs = ['html', 'css', 'javascript', 'react', 'redux', 'node', 'mongoDB']
 
 if (webTechs.includes("sass")) {
-    const filtered = webTechs.filter(tech => tech === "sass")
-    const upperWebTechs = filtered.map(main => main.toUpperCase())
-    console.log(upperWebTechs)
+    console.log("sass is a css processor")
 }
 else {
     webTechs.push("sass")
     console.log(webTechs)
 }
 
+// 3rd Assignment
 const ShoppingCart = ['milk', 'coffee', 'tea', 'honey'];
+
+// to add meat to the front of the array
 ShoppingCart.unshift("meat")
 console.log(ShoppingCart)
+
+//to add sugar to the end of the array
 ShoppingCart.push("sugar")
 console.log(ShoppingCart)
-const hondeyIndex = ShoppingCart.indexOf("honey");
-if (hondeyIndex !== -1) {
-    ShoppingCart.splice(hondeyIndex, 1);
-}
+
+// to remove honey from the array
+ShoppingCart.splice(ShoppingCart.length -2, 1)
 console.log(ShoppingCart)
-const teaIndex = ShoppingCart.indexOf("tea");
-if (teaIndex !== 1) {
-    ShoppingCart[teaIndex] = 'greentea';
-}
-console.log(ShoppingCart);
+
+//to add greeen in front of tea
+const ment = ShoppingCart.splice(3,1, "greentea");
+console.log(ShoppingCart)
+</div>
+<div class="container">
+    <h4 class="text-white">Output</h4>
+    <ol class="text-white">
+        <li>Array(11) [ "albania", "bolivia", "canada", "denmark", "ethopia", "finland", "germany", "hungary", "ireland", "japan", "kenya" ]</li>
+        <li>Array(8) [ "html", "css", "javascript", "react", "redux", "node", "mongoDB", "sass" ]</li>
+        <li>Array(5) [ "meat", "milk", "coffee", "tea", "honey" ]</li>
+        <li>Array(6) [ "meat", "milk", "coffee", "tea", "honey", "sugar" ]</li>
+        <li>Array(5) [ "meat", "milk", "coffee", "tea", "sugar" ]</li>
+        <li>Array(4) [ "meat", "milk", "coffee", "greentea", "sugar" ]</li>
+    </ol>
 </div>
 </code>
 </pre>
