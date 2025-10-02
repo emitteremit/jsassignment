@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assignment</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="1730746869006.jpg" type="image/jpg" />
+</head>
+
+<body class="bg-dark">
+    <!-- Navbar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
+                Javascript assignment
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Desktop Links -->
+            <div class="d-none d-lg-flex ms-auto align-items-center">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Assignment
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                            <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                            <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                            <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                            <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                            <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
+                            <li><a class="dropdown-item" href="#">loops</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day3.html">String Method</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Greetings</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Assignment
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
+                        <li><a class="dropdown-item" href="day7.html">DOM</a></li>
+                        <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
+                        <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
+                        <li><a class="dropdown-item" href="day10.html">Array</a></li>
+                        <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
+                        <li><a class="dropdown-item" href="#">loops</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-top: 130px;" class=" container bg-white numberDetection">
+        <div class="p-4">
+            <pre>
+        <code>
+            
+for(let numberDection = 100 ; numberDection <=200; numberDection++){
+    if(numberDection % 2 === 0){
+        console.log(`${numberDection} is an even number`)
+    }
+    else{
+        console.log(`${numberDection} is an odd number`)
+    }
+}
+        </code>
+    </pre>
+        <div>
+            <h4>Output:</h4>
+            <ul>
+                <li>100 is an even number</li>
+                <li>101 is an odd number</li>
+                <li>102 is an even number</li>
+                <li>103 is an odd number</li>
+                <li>104 is an even number</li>
+                <li>105 is an odd number</li>
+                <li>106 is an even number</li>
+                <li>107 is an odd number</li>
+                <li>108 is an even number</li>
+                <li>109 is an odd number</li>
+                <li>110 is an even number</li>
+                <li>111 is an odd number</li>
+                <li>112 is an even number</li>
+                <li>113 is an odd number</li>
+                <li>114 is an even number</li>
+                <li>115 is an odd number</li>
+                <li>116 is an even number</li>
+                <li>117 is an odd number</li>
+                <li>118 is an even number</li>
+                <li>119 is an odd number</li>
+                <li>120 is an even number</li>
+                <li>121 is an odd number</li>
+                <li>122 is an even number</li>
+                <li>123 is an odd number</li>
+                <li>124 is an even number</li>
+                <li>125 is an odd number</li>
+                <li>126 is an even number</li>
+                <li>127 is an odd number</li>
+                <li>128 is an even number</li>
+                <li>129 is an odd number</li>
+                <li>130 is an even number</li>
+                <li>131 is an odd number</li>
+                <li>132 is an even number</li>
+                <li>133 is an odd number</li>
+                <li>134 is an even number</li>
+                <li>135 is an odd number</li>
+                <li>136 is an even number</li>
+                <li>137 is an odd number</li>
+                <li>138 is an even number</li>
+                <li>139 is an odd number</li>
+                <li>140 is an even number</li>
+                <li>142 is an odd number</li>
+                <li>143 is an even number</li>
+                <li>144 is an odd number</li>
+                <li>145 is an even number</li>
+                <li>146 is an odd number</li>
+                <li>147 is an even number</li>
+                <li>148 is an odd number</li>
+                <li>149 is an even number</li>
+                <li>150 is an odd number</li>
+                <li>151 is an even number</li>
+                <li>152 is an odd number</li>
+                <li>153 is an even number</li>
+                <li>154 is an odd number</li>
+                <li>155 is an even number</li>
+                <li>156 is an odd number</li>
+                <li>157 is an even number</li>
+                <li>158 is an odd number</li>
+                <li>159 is an even number</li>
+                <li>160 is an odd number</li>
+                <li>161 is an even number</li>
+                <li>162 is an odd number</li>
+                <li>163 is an even number</li>
+                <li>164 is an odd number</li>
+                <li>165 is an even number</li>
+                <li>166 is an odd number</li>
+                <li>167 is an even number</li>
+                <li>168 is an odd number</li>
+                <li>169 is an even number</li>
+                <li>170 is an odd number</li>
+                <li>172 is an even number</li>
+                <li>173 is an odd number</li>
+                <li>174 is an even number</li>
+                <li>175 is an odd number</li>
+                <li>176 is an even number</li>
+                <li>177 is an odd number</li>
+                <li>178 is an even number</li>
+                <li>179 is an odd number</li>
+                <li>180 is an even number</li>
+                <li>181 is an odd number</li>
+                <li>182 is an even number</li>
+                <li>183 is an odd number</li>
+                <li>184 is an even number</li>
+                <li>185 is an odd number</li>
+                <li>186 is an even number</li>
+                <li>187 is an odd number</li>
+                <li>188 is an even number</li>
+                <li>189 is an odd number</li>
+                <li>190 is an even number</li>
+                <li>191 is an odd number</li>
+                <li>192 is an even number</li>
+                <li>193 is an odd number</li>
+                <li>194 is an even number</li>
+                <li>195 is an odd number</li>
+                <li>196 is an even number</li>
+                <li>197 is an odd number</li>
+                <li>198 is an even number</li>
+                <li>199 is an odd number</li>
+                <li>200  is an even number</li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+<script src="day12.js"></script>
+
+</html>

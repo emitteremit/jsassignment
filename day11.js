@@ -33,7 +33,7 @@ const guess = () => {
   const getUserInputToNumber = Number(getUserInput);
 
   if (getUserInputToNumber > maxNum || getUserInputToNumber < minNum) {
-    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;
+    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;  
     return;
   }
 
@@ -87,7 +87,7 @@ const input = {
 const aboutbutton = {
   border: "none",
   background: "white",
-  borderRadius:"20px",
+  borderRadius:"20px", 
   padding:"10px 40px",
   marginTop:"20px"
 }
