@@ -7,7 +7,7 @@
     <title>Js Assignment</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="icon" href="1730746869006.jpg" type="image/jpg"/>
+    <link rel="icon" href="1730746869006.jpg" type="image/jpg" />
 </head>
 
 <body class="bg-dark">
@@ -16,7 +16,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
-                Javascript Assignment
+                Javascript assignment
             </a>
 
             <!-- Mobile Menu Toggler -->
@@ -33,19 +33,20 @@
                     <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
                     <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Assignment
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
-                            <li><a class="dropdown-item" href="#">Functions</a></li>
+                            <li><a class="dropdown-item" href="day6.html">Functions</a></li>
                             <li><a class="dropdown-item" href="day7.html">DOM</a></li>
                             <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
                             <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
                             <li><a class="dropdown-item" href="day10.html">Array</a></li>
                             <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
-                            <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
+                            <li><a class="dropdown-item" href="day12.html">loops</a></li>
+                            <li><a class="dropdown-item" href="#">Generators</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -72,74 +73,127 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
-                        <li><a class="dropdown-item" href="#">Functions</a></li>
+                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
                         <li><a class="dropdown-item" href="day7.html">DOM</a></li>
                         <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
                         <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
                         <li><a class="dropdown-item" href="day10.html">Array</a></li>
                         <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                         <li><a class="dropdown-item" href="day12.html">loops</a></li>
-                        <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
-                        
+                        <li><a class="dropdown-item" href="#">Generators</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="container" style="margin-top: 130px;">
-        <button onclick="Calculate()" style="border: 1px solid black; padding: 10px 15px; border-radius: 30px;">
-            calculate
-        </button>
-        <pre class="bg-white text-dark container mt-5 pt-3 rounded">
+    <div class="text-white d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4"
+        style="margin-top: 130px;">
+        <div class="wholeme rounded">
+            <div class="p-5">
+                <h3 class="text-center">Password Generator</h3>
+                <input type="text" name="" id="myInput" placeholder="enter the length of password to Generate">
+                <div style="padding-top: 30px;">
+                    <ul id="myUl" class="bg-white rounded text-dark ">
+
+                    </ul>
+                </div>
+                <button id="myBtn">
+                    Generate PassWord
+                </button>
+            </div>
+        </div>
+        <div class="wholeme rounded">
+            <div class="text-center">
+                <div class="p-5">
+                    <h3 class="text-center">Color Generator</h3>
+                    <button id="generateBtn">
+                        Generate Color
+                    </button>
+                    <div id="colorBox" class="container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="code" class="container bg-white rounded mt-5">
+        <pre>
             <code>
-const Calculate = () => {
-let firstNumberToNum = prompt("input your first number").trim();
-let Operator = prompt("input the type 
-of operator you want to make use of")
-let seNumber = prompt("input your second number").trim()
-if(isNaN(firstNumberToNum) || isNaN(seNumber)){
-alert("one of your value is not a number")
+// password generator
+let passwordgen = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%&**"
+let passBut = document.getElementById("myBtn")
+let getUserUl = document.getElementById("myUl")
+const generatePass = () => {
+    document.getElementById("myUl").textContent = "";
+    let getInput = document.getElementById("myInput").value
+    let passGenerated = " "
+    let passwordGeneratorLength = getInput;
+    console.log(passwordGeneratorLength);
+    for (let i = 0; i < getInput; ++i) {
+        let machineGenerator = Math.floor(Math.random() * passwordGeneratorLength);
+        passGenerated += passwordgen[machineGenerator];
+    }
+    console.log(passGenerated)
+    console.log("password is about to be generated")
+    getUserUl.innerHTML += `<li>${passGenerated}</li>`
+    if (getInput === "") {
+        getUserUl.textContent = "your input is empty input valid inputs"
+    }
+    if (isNaN(getInput)) {
+        getUserUl.textContent = "your input is meant to be a number pls"
+    }
+    if (getInput > 20) {
+        getUserUl.textContent = `you want me to generate password 
+        of this long will u remember? anyway this is it (${passGenerated})`
+    }
+    if (getInput > 30) {
+        getUserUl.textContent = "you should only generate a password from 4 to 30"
+    }
+    if (getInput < 4) {
+        getUserUl.textContent = "you should only generate a password from 4 to 30"
+    }
+    document.getElementById("myInput").value = "";
 }
-else if(firstNumberToNum === "" || seNumber === ""){
-alert("your inputs are empty")
+passBut.addEventListener("click", generatePass);
+
+// color generator
+let button = document.getElementById("generateBtn");
+let box = document.getElementById("colorBox");
+button.addEventListener("click", () => {
+    const color = getRandomHexColor();
+    box.style.backgroundColor = color;
+    box.textContent = `color: ${color}`
+})
+const getRandomHexColor = () => {
+    const letters = "0123456789ABCDEF"
+    let color = "#"
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
-else if(Operator ==="/"){
-firstNumberToNum = Number(firstNumberToNum);
-seNumber = Number(seNumber);
-let division = firstNumberToNum / seNumber;
-alert(`the division between ${firstNumberToNum} 
-and ${seNumber} is ${division}`)
+const styling = {
+    backgroundColor: "white",
+    color: "black",
+    borderRadius: "20px",
+    padding: "20px"
 }
-else if(Operator === "+"){
-firstNumberToNum = Number(firstNumberToNum);
-seNumber = Number(seNumber);
-let sum = firstNumberToNum + seNumber;
-alert(`the additon of ${firstNumberToNum} 
-and ${seNumber} is ${sum}`)
+const boxStyling = {
+    width: "100%",
+    maxWidth: "300px",
+    borderRadius: "10px",
+    padding: "30px",
+    marginTop: "30px"
 }
-else if(Operator === "-"){
-firstNumberToNum = Number(firstNumberToNum);
-seNumber = Number(seNumber);
-substraction = firstNumberToNum - seNumber;
-alert(`the substraction of ${firstNumberToNum}
- and ${seNumber} is ${substraction}`)
-}
-else if(Operator === "*"){
-firstNumberToNum = Number(firstNumberToNum);
-seNumber = Number(seNumber);
-multiplication = firstNumberToNum * seNumber;
-alert(`the mulitiplication of ${firstNumberToNum}
- and ${seNumber} is ${multiplication}`)}
-else{alert("check your input ")}
-}
-        </code>
-    </pre>
+Object.assign(box.style, boxStyling)
+Object.assign(button.style, styling) 
+            </code>
+        </pre>
     </div>
 </body>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-<script src="day6.js"></script>
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+<script src="colorGenerator.js"></script>
 
 </html>

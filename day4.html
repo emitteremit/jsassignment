@@ -46,6 +46,7 @@
                             <li><a class="dropdown-item" href="day10.html">Array</a></li>
                             <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                             <li><a class="dropdown-item" href="day12.html">loops</a></li>
+                            <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -79,6 +80,7 @@
                         <li><a class="dropdown-item" href="day10.html">Array</a></li>
                         <li><a class="dropdown-item" href="day11.html">Guess Number Game</a></li>
                         <li><a class="dropdown-item" href="day12.html">loops</a></li>
+                        <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
                     </ul>
                 </li>
 
@@ -91,23 +93,25 @@
         <code>
 let currentTime = new Date();
 let hour = currentTime.getHours();
-let userName = "Temitope"            
-if (hour >= 4 && hour <= 12) {
-alert(`Good morning ${userName}`);
+let userName = prompt("what is your name");
+userName = userName.trim();
+
+if (hour >= 4 && hour < 12  && userName !== "") {
+    alert(`Good morning ${userName}`);
 }
-else if(hour >= 1 && hour <= 4) {
-alert(`This is mid night go and sleep ${userName}`);
+else if(hour >= 1 && hour <= 4 && userName !== "") {
+    alert(`This is mid night go and sleep ${userName}`);
 }
-else if (hour >= 13 && hour <= 16) {
-alert(`Good afternoon ${userName}`);
+else if (hour >= 12 && hour <= 16 && userName !== "") {
+    alert(`Good afternoon ${userName}`);
 }
-else if (hour >= 17 && hour <= 24) {
-alert(`Good evening ${userName}`);
+else if (hour >= 17 && hour <= 24 && userName !== "") {
+    alert(`Good evening ${userName}`);
 }
-else {
-alert(`This is not a proper time ${userName} 
-input correct time, the time you input is invalid`);
-}  
+else{
+    alert("You Name Is Empty, Please Reload")
+}
+             
 <strong>//ouput</strong>  
 <strong>Note: using 24 hours time not 12 hours time</strong>
 1. From 4am to 12 am it will display good morning 

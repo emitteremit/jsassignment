@@ -39,5 +39,4 @@ else if(userAge >= 1 && userAge < 18 && !isNaN(userAge)){
 }
 else{
     alert("Your Input Is Invalid Input Right Value Please")
-}
-
+} 

@@ -1,57 +1,68 @@
 const paragraph = document.getElementById("answer");
+const highScoreElement = document.getElementById("highScore");
 const button1 = document.getElementById("myBtn1");
 const button2 = document.getElementById("myBtn2");
 const userInput = document.getElementById("userInput");
-const div = document.getElementById("whole")
-const div2 = document.getElementById("whole2")
-const body = document.getElementById("body")
-const myCode = document.getElementById("code")
 const minNum = 10;
 const maxNum = 25;
 const maxAttempts = 6;
-
-let machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+let score = 15;
+let highScore = 0;
 let attempts = 0;
+let machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
 
 console.log(machineGuessNumber);
 
 button2.style.display = "none";
+highScoreElement.style.display = "none";
 
 const guess = () => {
+  attempts++;
   const getUserInput = userInput.value.trim();
 
   if (getUserInput === "") {
     paragraph.textContent = "Your input is not meant to be empty, Please enter a valid number";
+    attempts--;
     return;
   }
 
   if (isNaN(getUserInput)) {
     paragraph.textContent = "Your input should be a number not an Alphabet please";
+    attempts--;
     return;
   }
 
   const getUserInputToNumber = Number(getUserInput);
 
   if (getUserInputToNumber > maxNum || getUserInputToNumber < minNum) {
-    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;  
+    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;
+    attempts--;
     return;
   }
 
-  attempts++;
-
   if (machineGuessNumber === getUserInputToNumber) {
-    paragraph.textContent = `Congratulations!✅ You guessed it right in ${attempts} tries`;
+    paragraph.textContent = `Congratulations! You guessed it right in ${attempts} tries you scored ${score} points`;
+    highScore += 15;
+    highScoreElement.textContent = `Highest Score: ${highScore}`;
+    highScoreElement.style.display = "block";
     button1.style.display = "none";
     button2.style.display = "inline-block";
-  } else if (attempts >= maxAttempts) {
-    paragraph.textContent = `Game over! all guesses were wrong The right number is ${machineGuessNumber}`;
+  }
+  else if (attempts >= maxAttempts) {
+    paragraph.textContent = `Game over! all guesses were wrong The right number is ${machineGuessNumber} you scored 0 poimts`;
+    highScoreElement.textContent = `Highest Score: ${highScore}`;
+    highScoreElement.style.display = "block";
     button1.style.display = "none";
     button2.style.display = "inline-block";
-  } else {
-    paragraph.textContent = `Not correct❌. Attempts left: ${maxAttempts - attempts}`;
+  }
+  else {
+    if (getUserInputToNumber > machineGuessNumber) {
+      paragraph.textContent = `Not correct. You're too high. Attempts left: ${maxAttempts - attempts}`;
+    } else {
+      paragraph.textContent = `Not correct. You're too low. Attempts left: ${maxAttempts - attempts}`;
+    }
   }
   userInput.value = "";
-  document.getElementById("userInput").value = ""
 };
 
 const resetGame = () => {
@@ -61,53 +72,9 @@ const resetGame = () => {
   button2.style.display = "none";
   paragraph.textContent = "";
   userInput.value = "";
+  highScoreElement.style.display = "none";
   console.log(machineGuessNumber);
 };
-paragraph.style.color ="green"
-const allabout = {
-    background: "black",
-    color: "white",
-    width: "100%",
-    maxWidth: "500px",
-    height: "auto",
-    borderRadius: "10px",
-    marginTop: '130px' ,
-    boxShadow: "inset  0px 0px 10px white "
 
-}
-const allabout2 = {
-    padding: '80px'
-}
-const input = {
-    borderRadius:"10px",
-    padding:"10px",
-    width:"100%",
-    maxWidth:"400px",
-}
-const aboutbutton = {
-  border: "none",
-  background: "white",
-  borderRadius:"20px", 
-  padding:"10px 40px",
-  marginTop:"20px"
-}
-const aboutbutton2 = {
-  border: "none",
-  background: "white",
-  borderRadius:"20px",
-  padding:"10px 40px",
-  marginTop:"20px"
-}
-body.style.background = "black"
-const wholeCode = {
-  background: "white",
-  width: "100%",
-  borderRadius: "10px",
-  marginTop: "20px"
-}
-Object.assign(myCode.style, wholeCode)
-Object.assign(div.style, allabout)
-Object.assign(div2.style,allabout2)
-Object.assign(userInput.style, input)
-Object.assign(button1.style, aboutbutton)
-Object.assign(button2.style,aboutbutton2)
+button1.addEventListener("click", guess);
+button2.addEventListener("click", resetGame);
