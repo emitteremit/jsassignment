@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Assignment</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="icon" href="1730746869006.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" href="1730746869006.jpg" type="image/jpg" />
 </head>
-<body class="bg-dark">
-      <!-- Navbar -->
+
+<body>
+  <!-- Navbar -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -37,22 +40,21 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</a>
               <ul class="dropdown-menu ">
-                <li class="nav-item"><a class="dropdown-item" href="#">Age & Grade Checker</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day5.html">Age & Grade Checker</a></li>
                 <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Form-validations</a>
               <ul class="dropdown-menu">
-                <li class="nav-item"><a class="dropdown-item" href="day14.html">Login Account Form</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="#">Login Account Form</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
               <ul class="dropdown-menu ">
-                <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day8.html">Retirement & Simple Calculator</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day9.html">loan Calculator</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator1</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
               </ul>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
@@ -92,22 +94,21 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li class="nav-item"><a class="dropdown-item" href="#">Conditional Statement</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
               <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Form-validations</a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li class="nav-item"><a class="dropdown-item" href="day14.html">Login Account Form</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#">Login Account Form</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
             <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day8.html">Retirement & Simple Calculator</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day9.html">loan Calculator</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day6.html">simple Calculator1</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
             </ul>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
@@ -124,70 +125,43 @@
         </ul>
     </div>
   </div>
-    <div style="margin-top: 130px;" id="code11">
-        <h1 class="text-center text-white">CONDITIONAL STATEMENT (IF AND IF ELSE)</h1>
-    <pre class="bg-white text-dark container mt-5 pt-3 rounded ment">
-        <code >
-let scoreRequest =prompt("You Want To Know 
-Your Grade? InPut your score");
-let scoreRequestConNum = scoreRequest.trim();
-let getUsersGrade = Number(scoreRequestConNum);
+    <div id="formAll" class="container">
+        <form id="form" class="p-4">
+            <div class="d-flex flex-column">
+                <label>Enter your email</label>
+                <input type="text" id="email" class="rounded"/>
+                <p id="errorEmail"></p>
+            </div>
+            <div class="d-flex flex-column">
+                <label>Create a Username</label>
+                <input type="text" id="userName" class="rounded"/>
+                <p id="errorUserName"></p>
+            </div>
+            <div class="d-flex flex-column">
+                <label>Create a password</label>
+                <input type="text" id="passWord" class="rounded"/>
+                <p id="errorPassWord"></p>
+            </div>
+            <button id="myBtn" type="submit">Submit</button>
+        </form>
+        <div class="p-4">
+          <p id="sevenChacter" class="mb-0">Minimum length 7 characters</p>
+          <p id="capitalLetter" class="mb-0 " >Must contain capital & small letter</p>
+          <p id="num"class="mb-0 ">must contain Number & symbol</p>
+        </div>
+    </div>
 
-if (getUsersGrade >= 80 && getUsersGrade
-<= 100 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (A)")
-}
-else if (getUsersGrade >= 70 && getUsersGrade 
-<= 79 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (B)")
-} 
-else if (getUsersGrade >= 60 && getUsersGrade 
-<= 69 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (C)")
-}
-else if (getUsersGrade >= 50 && getUsersGrade 
-<= 59 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (D)")
-}
-else if (getUsersGrade >= 1 && getUsersGrade 
-<= 49 && !isNaN(getUsersGrade)) {
-    alert("based on your score your grade is (F)")
-}
-else {
-    alert("input score at the range of 0 - 100")
-}
+    <div class="container" id="formSubmitted">
+        <div style="position: relative; top: 100px; padding: 30px;">
+            <h1 id="submitted" style="margin-top: 20px;">Form Submitted Successfully!</h1>
+            <button id="goBack" class="btn btn-danger mt-3">Return Back To Your Form</button>
+        </div>
+    </div>
 
-
-let ageRequest = prompt("What Is Your Age ");
-let ageRequestConNum = ageRequest.trim();
-let userAge = Number(ageRequestConNum);
-let underAge = 18 - userAge;
-
-if (userAge === 18 && !isNaN(userAge)) {
-    alert("You Are 18 Years Old And 
-    You Are Old Enough To Drive")
-}
-else if(userAge > 18 && !isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old And 
-    You Are Old Enough To Drive.`)
-}
-
-else if(userAge >= 1 && userAge < 18 && 
-!isNaN(userAge)){
-    alert(`You Are ${userAge} Years Old. 
-    You Have ${underAge} years Left To Drive`)
-}
-else{
-    alert("Your Input Is Invalid Input
-    Right Value Please")
-}
-
-
-        </code>
-    </pre>
 </body>
-<script src="day5.js"></script>
+<script src="day14.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+
 </html>

@@ -9,97 +9,141 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="icon" href="1730746869006.jpg" type="image/jpg">
 </head>
-
+<style>
+    body{
+        overflow-x: hidden;
+    }
+</style>
 <body id="body" class="bg-dark">
-    <!-- Navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
-                Javascript assignment
-            </a>
+         <!-- Navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
+        Javascript assignment
+      </a>
 
-            <!-- Mobile Menu Toggler -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <!-- Mobile Menu Toggler -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Desktop Links -->
-            <div class="d-none d-lg-flex ms-auto align-items-center">
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item"><a class="nav-link" href="index.html">History of Javascript</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day2.html">Variables</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day3.html">String Method</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day4.html">Greetings</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="day5.html" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Assignment
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
-                            <li><a class="dropdown-item" href="day6.html">Functions</a></li>
-                            <li><a class="dropdown-item" href="day7.html">Dom</a></li>
-                            <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
-                            <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
-                            <li><a class="dropdown-item" href="day10.html">Array</a></li>
-                            <li><a class="dropdown-item" href="#">Guess Number Game</a></li>
-                            <li><a class="dropdown-item" href="day12.html">loops</a></li>
-                            <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Offcanvas for Mobile -->
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">History of Javascript</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day2.html">Variables</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day3.html">String Method</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="day4.html">Greetings</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="day5.html" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Assignment
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
-                        <li><a class="dropdown-item" href="day6.html">Functions</a></li>
-                        <li><a class="dropdown-item" href="day7.html">Dom</a></li>
-                        <li><a class="dropdown-item" href="day8.html">Calculator</a></li>
-                        <li><a class="dropdown-item" href="day9.html">Loan Calculator</a></li>
-                        <li><a class="dropdown-item" href="day10.html">Array</a></li>
-                        <li><a class="dropdown-item" href="#">Guess Number Game</a></li>
-                        <li><a class="dropdown-item" href="day12.html">loops</a></li>
-                        <li><a class="dropdown-item" href="colorGenerator.html">Generators</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+      <!-- Desktop Links -->
+      <div class="d-none d-lg-flex ms-auto align-items-center">
+        <ul class="navbar-nav flex-row">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">intro to Javascript</a>
+              <ul class="dropdown-menu ">
+                <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</a>
+              <ul class="dropdown-menu ">
+                <li class="nav-item"><a class="dropdown-item" href="day5.html">Age & Grade Checker</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Form-validations</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="dropdown-item" href="day14.html">Login Account Form</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
+              <ul class="dropdown-menu ">
+                <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator1</a></li>
+                <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
+              </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="dropdown-item" href="#">Guess my Number Game</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Interactive Generator</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="dropdown-item" href="colorGenerator.html">Password & Color Generator</a></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+      </div>
     </div>
-    <!-- Your HTML here -->
-    <div id="whole" class="container text-center mb-4">
+  </nav>
+
+  <!-- Offcanvas for Mobile -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-row">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">intro to Javascript</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <p class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</p>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Form-validations</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="day14.html">Login Account Form</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="day6.html">simple Calculator1</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
+            </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="#">Guess my Number Game</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Interactive Generator</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item"><a class="dropdown-item" href="colorGenerator.html">Color Generator</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+    <div style="margin-top: 100px;"></div>
+    <div id="whole" class="container text-center mb-4 ">
         <h4>This is a guess my number game you are to guess a number within the range of 10 to 25</h4>
         <input id="userInput" type="text" style="border-radius: 10px; padding: 10px; width: 100%; max-width: 500px;">
         <button id="myBtn1"
-        style="border: none; background: white; border-radius: 20px; padding: 10px 40px; margin-top: 20px;">Guess</button>
+            style="border: none; background: white; border-radius: 20px; padding: 10px 40px; margin-top: 20px;">Guess</button>
         <button id="myBtn2"
-        style="border: none; background: white; border-radius: 20px; padding: 10px 40px; margin-top: 20px;">Reset</button>
+            style="border: none; background: white; border-radius: 20px; padding: 10px 40px; margin-top: 20px;">Reset</button>
         <p id="answer" class="text-success"></p>
         <p id="highScore" class="text-success"></p>
     </div>
-    <div id="code" class="container bg-white rounded">
-        <pre>
-            <code>
+    <div id="code11" class="container bg-white rounded">
+        <div>
+            <pre class="ment">
+        <code>
 const paragraph = document.getElementById("answer");
 const highScoreElement = document.getElementById("highScore");
 const button1 = document.getElementById("myBtn1");
@@ -119,73 +163,73 @@ button2.style.display = "none";
 highScoreElement.style.display = "none";
 
 const guess = () => {
-attempts++;
-const getUserInput = userInput.value.trim();
+  attempts++;
+  const getUserInput = userInput.value.trim();
 
-if (getUserInput === "") {
-  paragraph.textContent = "Your input is not meant to be empty, Please enter a valid number";
-  attempts--;
-  return;
-}
-                
-if (isNaN(getUserInput)) {
-  paragraph.textContent = "Your input should be a number not an Alphabet please";
-  attempts--;
-  return;
-}
-
-const getUserInputToNumber = Number(getUserInput);
-if (getUserInputToNumber > maxNum || getUserInputToNumber < minNum) {
-  paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;
-  attempts--;
-  return;
-}
-
-if (machineGuessNumber === getUserInputToNumber) {
-  paragraph.textContent = `Congratulations! You guessed it right in ${attempts} tries you scored ${score} points`;
-  highScore += 15;
-  highScoreElement.textContent = `Highest Score: ${highScore}`;
-  highScoreElement.style.display = "block";
-  button1.style.display = "none";
-  button2.style.display = "inline-block";
-}
-else if (attempts >= maxAttempts) {
-  paragraph.textContent = `Game over! all guesses were wrong The right number is ${machineGuessNumber} you scored 0 poimts`;
-  highScoreElement.textContent = `Highest Score: ${highScore}`;
-  highScoreElement.style.display = "block";
-  button1.style.display = "none";
-  button2.style.display = "inline-block";
-}
-else {
-  if (getUserInputToNumber > machineGuessNumber) {
-    paragraph.textContent = `Not correct. You're too high. Attempts left: ${maxAttempts - attempts}`;
-  } else {
-    paragraph.textContent = `Not correct. You're too low. Attempts left: ${maxAttempts - attempts}`;
+  if (getUserInput === "") {
+    paragraph.textContent = "Your input is not meant to be empty, Please enter a valid number";
+    attempts--;
+    return;
   }
-}
-userInput.value = "";
+
+  if (isNaN(getUserInput)) {
+    paragraph.textContent = "Your input should be a number not an Alphabet please";
+    attempts--;
+    return;
+  }
+
+  const getUserInputToNumber = Number(getUserInput);
+
+  if (getUserInputToNumber > maxNum || getUserInputToNumber < minNum) {
+    paragraph.textContent = `Please enter a number between ${minNum} and ${maxNum}`;
+    attempts--;
+    return;
+  }
+
+  if (machineGuessNumber === getUserInputToNumber) {
+    paragraph.textContent = `Congratulations! You guessed it right in ${attempts} tries you scored ${score} points`;
+    highScore += 15;
+    highScoreElement.textContent = `Highest Score: ${highScore}`;
+    highScoreElement.style.display = "block";
+    button1.style.display = "none";
+    button2.style.display = "inline-block";
+  }
+  else if (attempts >= maxAttempts) {
+    paragraph.textContent = `Game over! all guesses were wrong The right number is ${machineGuessNumber} you scored 0 poimts`;
+    highScoreElement.textContent = `Highest Score: ${highScore}`;
+    highScoreElement.style.display = "block";
+    button1.style.display = "none";
+    button2.style.display = "inline-block";
+  }
+  else {
+    if (getUserInputToNumber > machineGuessNumber) {
+      paragraph.textContent = `Not correct. You're too high. Attempts left: ${maxAttempts - attempts}`;
+    } else {
+      paragraph.textContent = `Not correct. You're too low. Attempts left: ${maxAttempts - attempts}`;
+    }
+  }
+  userInput.value = "";
 };
-                
+
 const resetGame = () => {
-machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
-attempts = 0;
-button1.style.display = "inline-block";
-button2.style.display = "none";
-paragraph.textContent = "";
-userInput.value = "";
-highScoreElement.style.display = "none";
-console.log(machineGuessNumber);
+  machineGuessNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+  attempts = 0;
+  button1.style.display = "inline-block";
+  button2.style.display = "none";
+  paragraph.textContent = "";
+  userInput.value = "";
+  highScoreElement.style.display = "none";
+  console.log(machineGuessNumber);
 };
- 
+
 button1.addEventListener("click", guess);
 button2.addEventListener("click", resetGame);
-            </code>
-        </pre>
+        </code>
+    </pre>
+        </div>
     </div>
-</body>
-<script src="day11.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+
+    <script src="day11.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
-
-</html>
