@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
         errorUserName.textContent = " required";
     }
     else if (!checkUsername.test(userName.value.trim())) {
-        errorUserName.textContent = "Username must be at least 6 characters includes only uppercase and lowercase letters"
+        errorUserName.textContent = "Username must be at least 6 characters include only uppercase and lowercase letters"
     }
     else {
         errorUserName.textContent = ""
@@ -68,9 +68,6 @@ form.addEventListener("submit", (e) => {
         }
     }
 })
-checknum.style.color = "red"
-sevenChacter.style.color = "red"
-capitalLetter.style.color = "red"
 passWord.addEventListener("input", () => {
     if (passWord.value.match(/[a-z]/) && passWord.value.match(/[A-Z]/)) {
         capitalLetter.style.color = "green"
@@ -122,4 +119,11 @@ remove.addEventListener("click", () => {
     formSubmitted.style.display = "none"
     formAll.style.display = "block"
     form.style.display = "block"
+    checknum.style.color = "red"
+    sevenChacter.style.color = "red"
+    capitalLetter.style.color = "red"
+
 })
+    checknum.style.color = "red"
+    sevenChacter.style.color = "red"
+    capitalLetter.style.color = "red"

@@ -1,0 +1,60 @@
+const users = [
+    {
+        name:"brook",
+        score:75,
+        skills:["html","css","js"],
+        age:16,
+    },
+    {
+        name:"ajax",
+        score:80,
+        skills:["html","css","js","react"],
+        age:18,
+    },
+    {
+        name:"david",
+        score:75,
+        skills:["html","css"],
+        age:22,
+    },
+    {
+        name:"john",
+        score:85,
+        skills:["html"],
+        age:25,
+    },
+    {
+        name:"sara",
+        score:95,
+        skills:["html","css","js"],
+        age:26,
+    },
+    {
+        name:"martha",
+        score:80,
+        skills:["html","css","js","react"],
+        age:18,
+    },
+    {
+        name:"mattew",
+        score:60,
+        skills:[],
+        age:22,
+    },
+    {
+        name:"thomas",
+        score:90,
+        skills:["html","css","dart","Kotlin"],
+        age:20,
+    },
+    {
+        name:"promise",
+        score:90,
+        skills:["html","css","js","flutter"],
+        age:20,
+    }
+]
+const names = users.map(({name}) => name);
+console.log(names)
+const skills  = users.filter (({skills}) => skills.length < 2)
+console.log(skills)
