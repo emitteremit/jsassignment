@@ -1,0 +1,65 @@
+.navbar-icon {
+    border-radius: 100%;
+    height: 55px;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.nav-item,
+.dropdown-item{
+    font-weight: 600;
+}
+.toDoListAll {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.allList {
+    background-color: #A4193D;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    color: #FFDFB9;
+    padding-top: 50px;
+
+}
+
+.bodyForList {
+    background-color: #FFDFB9;
+}
+
+#addTask {
+    border: none;
+    background-color: #FFDFB9;
+    color: #A4193D;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#myInputList {
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    border: none;
+}
+
+#myInputList:focus,
+#startTime:focus,
+#endTime:focus {
+    outline: none;
+}
+
+#startTime,
+#endTime {
+    width: 100%;
+    border: none;
+    padding: 10px;
+}

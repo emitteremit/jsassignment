@@ -46,7 +46,7 @@ const users = [
         score:90,
         skills:["html","css","dart","Kotlin"],
         age:20,
-    },
+    }, 
     {
         name:"promise",
         score:90,
@@ -57,4 +57,5 @@ const users = [
 const names = users.map(({name}) => name);
 console.log(names)
 const skills  = users.filter (({skills}) => skills.length < 2)
-console.log(skills)
+const namesWithLessThanTwoSkills = skills.map(({name}) => name);
+console.log(namesWithLessThanTwoSkills)

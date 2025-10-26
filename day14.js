@@ -21,6 +21,9 @@ let sevenChacter = document.getElementById("sevenChacter")
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     //email
+    errorUserName.textContent = ""
+    errorPassWord.textContent = ""
+    error.textContent = ""
     if (email.value === "") {
         error.textContent = " required";
     }

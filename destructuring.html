@@ -1,127 +1,146 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js Assignment</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="icon" href="1730746869006.jpg" type="image/jpg" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js Assignment</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="1730746869006.jpg" type="image/jpg" />
+</head>
 
-  <body class="bg-dark">
-    <!-- Navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
-          Javascript assignment
-        </a>
+<body class="bg-dark">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand" href="#">
+        <img src="1730746869006.jpg" alt="logo" width="50" class="navbar-icon">
+        Javascript
+      </a>
 
-        <!-- Mobile Menu Toggler -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Mobile Menu Toggler -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Desktop Links -->
-        <div class="d-none d-lg-flex ms-auto align-items-center">
-          <ul class="navbar-nav flex-row">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">intro to Javascript</a>
-                <ul class="dropdown-menu ">
-                  <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</a>
-                <ul class="dropdown-menu ">
-                  <li class="nav-item"><a class="dropdown-item" href="day5.html">Age & Grade Checker</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
-                </ul>
-              </li>
-              <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-                <li class="nav-item"><a class="nav-link" href="day14.html">Form-validations</a></li>
-              </ul>
-              <!-- <li class="nav-item"><a class="navbar-item" href="#">Form-validations</a></li> -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
-                <ul class="dropdown-menu ">
-                  <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator1</a></li>
-                  <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
-                </ul>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="dropdown-item" href="day11.html">Guess my Number Game</a></li>
-                </ul>
-              </li>
-            </ul>
-          </ul>
-          <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-            <li class="nav-item"><a class="nav-link" href="colorGenerator.html">Interactive Generator</a></li>
-          </ul>
-          <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-            <li class="nav-item"><a class="nav-link" href="#">Array_destructuring_task</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- Offcanvas for Mobile -->
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body">
+      <!-- Desktop Links -->
+      <div class="collapse navbar-collapse d-lg-flex justify-content-center ms-auto align-items-center"
+        id="navbarSupportedContent">
         <ul class="navbar-nav flex-row">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">intro to Javascript</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Control Flow & logic</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item" href="day5.html">Conditional Statement</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
-              </ul>
-            </li>
-            <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-              <li class="nav-item"><a class="nav-link" href="day14.html">Form-validations</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+              role="button">Intro to Javascript</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
             </ul>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Calculators</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item" href="day6.html">simple Calculator1</a></li>
-                <li class="nav-item"><a class="dropdown-item" href="day8.html">Simple Calculator2</a></li>
-              </ul>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Games</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item" href="day11.html">Guess my Number Game</a></li>
-              </ul>
-            </li>
-            <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-              <li class="nav-item"><a class="nav-link" href="colorGenerator.html">Interactive Generator</a></li>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+              role="button">Control Flow & Logic</a>
+            <ul class="dropdown-menu">
+              <!-- <li class="nav-item"><a class="dropdown-item" href="#">History of Javascript</a></li> -->
+              <li class="nav-item"><a class="dropdown-item" href="day5.html">Age & Grade Checker</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
             </ul>
-            <ul class="nav-links navbar-nav ms-0 mb-2 mb-lg-0 d-flex ">
-              <li class="nav-item"><a class="nav-link" href="#">Array_destructuring_task</a></li>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+              role="button">Calculators</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator-1</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day8.html"> Retirement & Simple Calculator</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day9.html">Loan-Calculaor</a></li>
             </ul>
-          </ul>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+              role="button">Projects</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="uberapp.html">Uber-app</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="hotel.html">Hotel-App</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="To-dolist.html">To-do List App</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+              role="button">Others</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="day14.html">Form-Validations</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="colorGenerator.html">Interactive Generator</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="#">Array-Destructuring-Task</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="day11.html">Guess My-Number-Game</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="countDown.html">CountDown</a></li>
+            </ul>
+          </li>
+          <!-- Other nav items -->
+        </ul>
       </div>
     </div>
-    <h1 style="margin-top: 130px;" class="text-white text-center mb-4">Array_destructuring_task</h1>
-    <div class="bg-white text-dark container rounded" id="code11">
-      <pre class="mycode ment">
+  </nav>
+
+  <!-- Offcanvas for Mobile -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown" role="button">Intro
+            to Javascript</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="dropdown-item" href="index.html">History of Javascript</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day2.html">Variables</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day4.html">Greetings</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+            role="button">Control Flow & Logic</a>
+          <ul class="dropdown-menu">
+            <!-- <li class="nav-item"><a class="dropdown-item" href="#">History of Javascript</a></li> -->
+            <li class="nav-item"><a class="dropdown-item" href="day5.html">Age & Grade Checker</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day12.html">Loops</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+            role="button">Calculators</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="dropdown-item" href="day6.html">Simple Calculator-1</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day8.html"> Retirement & Simple Calculator</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day9.html">Loan-Calculaor</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+            role="button">Projects</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="dropdown-item" href="uberapp.html">Uber-app</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="hotel.html">Hotel-App</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="To-dolist.html">To-do List App</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navbarDropdown"
+            role="button">Others</a>
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="dropdown-item" href="day14.html">Form-Validations</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="colorGenerator.html">Interactive Generator</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="#">Array-Destructuring-Task</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="day11.html">Guess My-Number-Game</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="countDown.html">CountDown</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h1 style="margin-top: 130px;" class="text-white text-center mb-4">Array_destructuring_task</h1>
+  <div class="bg-white text-dark container rounded" id="code11">
+    <pre class="mycode ment">
             <code>                const users = [
       {
           name:"brook",
@@ -184,65 +203,40 @@
   console.log(skills)
               </code>
           </pre>
-  <h1>output:</h1>
-  <ol>
-    <li>Array(9) [ "brook", "ajax", "david", "john", "sara", "martha", "mattew", "thomas", "promise" ]
-      ​
-      0: "brook"
-      ​
-      1: "ajax"
-      ​
-      2: "david"
-      ​
-      3: "john"
-      ​
-      4: "sara"
-      ​
-      5: "martha"
-      ​
-      6: "mattew"
-      ​
-      7: "thomas"
-      ​
-      8: "promise"
-      ​
-      length: 9
-      ​
+    <h1>output:</h1>
+    <ol>
+      <li>Array(9) [ "brook", "ajax", "david", "john", "sara", "martha", "mattew", "thomas", "promise" ]
+        ​
+        0: "brook"
+        ​
+        1: "ajax"
+        ​
+        2: "david"
+        ​
+        3: "john"
+        ​
+        4: "sara"
+        ​
+        5: "martha"
+        ​
+        6: "mattew"
+        ​
+        7: "thomas"
+        ​
+        8: "promise"
+        ​
+        length: 9
+        ​
       </li>
       <li>
-        Array [ {…}, {…} ]
-  ​
-  0: Object { name: "john", score: 85, age: 25, … }
-  ​​
-  age: 25
-  ​​
-  name: "john"
-  ​​
-  score: 85 
-  ​​
-  skills: Array [ "html" ]
-  ​​
-  prototype: Object { … }
-  ​
-  1: Object { name: "mattew", score: 60, age: 22, … }
-  ​​
-  age: 22
-  ​​
-  name: "mattew"
-  ​​ 
-  score: 60
-  ​​
-  skills: Array []
-  ​​
-  prototype: Object { … }
-  ​
-  length: 2
+        (2) ['john', 'mattew']0: "john"1: "mattew"length: 2[[Prototype]]: Array(0)
       </li>
-  </ol>
-    </div>
-  </body>
-  <script src="destructuring.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-      </script>
-  </html>
+    </ol>
+  </div>
+</body>
+<script src="destructuring.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+  </script>
+
+</html>

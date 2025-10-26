@@ -72,7 +72,7 @@ const resetGame = () => {
   button2.style.display = "none";
   paragraph.textContent = "";
   userInput.value = "";
-  highScoreElement.style.display = "none";
+  highScoreElement.style.display = "block";
   console.log(machineGuessNumber);
 };
 
